@@ -16,6 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import mkg_demo.views as mv
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('', mv.home_page),
+    path('entity_recognition/', mv.entity_recognition),
+    path('entity_query/', mv.entity_query),
+    path('relation_query/', mv.relation_query),
+    path('robot_conversion/', mv.robot_conversion),
+    path('mkg_classify/', mv.mkg_classify),
 ]
